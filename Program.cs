@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 namespace ConsoleApp9
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             Console.WriteLine("Starting application. Do you want to proceed? Press Y to start and N to exit.");
             Program program = new Program();
-            //program.schoolItems();
             bool restart;
             string started = Console.ReadLine();
-            while(started.Length > 1 || started.Length == 1 && started.ToUpper() != "Y" || started.Length == 1 && started.ToUpper() != "N")
+            while (started.Length > 1 || started.Length == 1 && started.ToUpper() != "Y" || started.Length == 1 && started.ToUpper() != "N")
             {
                 if (started.ToUpper() == "Y")
                 {
                     restart = program.schoolItems();
-                    while(restart)
+                    while (restart)
                     {
                         if (restart == false)
                         {
@@ -31,7 +29,7 @@ namespace ConsoleApp9
                         }
 
                     }
-               
+
                 }
                 else if (started.ToUpper() == "N")
                 {
@@ -41,12 +39,12 @@ namespace ConsoleApp9
                 Console.WriteLine("Press Y to start and N to exit.");
                 started = Console.ReadLine();
             }
-         
+
         }
         int percent(int a, int b)
         {
             double percent = a * 100 / b;
-            return (int) Math.Round(percent, 2);
+            return (int)Math.Round(percent, 2);
         }
         bool schoolItems()
         {
@@ -92,22 +90,22 @@ namespace ConsoleApp9
             }
             Console.WriteLine("Do you want to restart? Press Y to restart or N to exit application.");
             string restart = Console.ReadLine();
-            while(restart.Length > 1 || restart.Length == 1 && restart.ToUpper() != "Y" || restart.Length == 1 && restart.ToUpper() != "N")
+            while (restart.Length > 1 || restart.Length == 1 && restart.ToUpper() != "Y" || restart.Length == 1 && restart.ToUpper() != "N")
             {
-                if(restart.ToUpper() == "Y")
+                if (restart.ToUpper() == "Y")
                 {
                     return true;
                 }
-                else if(restart.ToUpper() == "N")
+                else if (restart.ToUpper() == "N")
                 {
                     Environment.Exit(-1);
-                    
+
                 }
                 Console.WriteLine("Press Y to restart or N to exit application.");
                 restart = Console.ReadLine();
             }
             return false;
-           
+
         }
     }
 }
