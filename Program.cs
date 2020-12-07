@@ -45,7 +45,8 @@ namespace ConsoleApp9
         }
         int percent(int a, int b)
         {
-            return (a / b) * 100; ;
+            double percent = a * 100 / b;
+            return (int) Math.Round(percent, 2);
         }
         bool schoolItems()
         {
