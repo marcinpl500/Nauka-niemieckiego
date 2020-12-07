@@ -80,6 +80,7 @@ namespace ConsoleApp9
             int percent = program.percent(corrects, Questions.Count);
             Console.WriteLine();
             Console.WriteLine($"You've answered wrong on {wrongs} and right on {corrects} questions. Percent of correct questions is {percent}%. Here are the correct answers to the questions: ");
+            Console.WriteLine();
             foreach (string wrong in Wrongs)
             {
                 int answersIndex = userAnswers.FindIndex(x => x == wrong);
